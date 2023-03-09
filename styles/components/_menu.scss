@@ -1,0 +1,110 @@
+main .menu {
+  margin-top: 40px;
+
+  .menu-link {
+    text-decoration: none;
+    text-align: center;
+
+    .menu-image-wrapper {
+      position: relative;
+      border: 0;
+      width: 100%;
+      height: 0;
+      padding-top: 100%;
+      box-sizing: border-box;
+
+      .menu-image {
+        background-image: url("../../assets/images/menu-bg.jpg");
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        overflow: hidden;
+        transition: box-shadow 0.4s ease;
+        -webkit-transition: box-shadow 0;
+        -moz-transition: box-shadow 0;
+        -ms-transition: box-shadow 0;
+        -o-transition: box-shadow 0;
+      }
+    }
+
+    .menu-title {
+      font-weight: 700;
+      font-size: 18px;
+      color: #060c2b;
+      text-align: center;
+      margin-top: 1rem;
+      transition: color 0.4s ease;
+      -webkit-transition: color 0.4s ease;
+      -moz-transition: color 0.4s ease;
+      -ms-transition: color 0.4s ease;
+      -o-transition: color 0.4s ease;
+    }
+
+    &:hover {
+      .menu-image-wrapper .menu-image {
+        box-shadow: 0px 27px 36px rgba(0, 0, 0, 0.21),
+          0px 8.13971px 10.8529px rgba(0, 0, 0, 0.136834),
+          0px 3.38082px 4.50776px rgba(0, 0, 0, 0.105),
+          0px 1.22278px 1.63037px rgba(0, 0, 0, 0.0731663);
+      }
+
+      .menu-title {
+        color: #f3af1c;
+      }
+    }
+  }
+}
+
+// BREAKPOINT: 768px
+@media screen and (max-width: 767px) {
+  main .menu {
+    margin-top: 32px;
+
+    .menu-link {
+      .menu-image-wrapper .menu-image {
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+      }
+
+      .menu-title {
+        font-size: 18px;
+        margin-top: 0.5rem;
+      }
+
+      &:hover .menu-image-wrapper .menu-image {
+        box-shadow: 0px 8.13971px 10.8529px rgba(0, 0, 0, 0.136834),
+          0px 3.38082px 4.50776px rgba(0, 0, 0, 0.105),
+          0px 1.22278px 1.63037px rgba(0, 0, 0, 0.0731663);
+      }
+    }
+  }
+}
+
+// BREAKPOINT: 576px
+@media screen and (max-width: 575px) {
+  main .menu {
+    .menu-link {
+      .menu-title {
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  & nav.navbar {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: padding 0.4s ease-in-out;
+    -webkit-transition: padding 0.4s ease-in-out;
+    -moz-transition: padding 0.4s ease-in-out;
+    -ms-transition: padding 0.4s ease-in-out;
+    -o-transition: padding 0.4s ease-in-out;
+
+    .nav-pattern-kiri,
+    .nav-pattern-kanan {
+      position: absolute;
+      height: 66px;
+      top: 0;
+      bottom: 0;
+      transition: height 0.4s ease-in-out;
+      -webkit-transition: height 0.4s ease-in-out;
+      -moz-transition: height 0.4s ease-in-out;
+      -ms-transition: height 0.4s ease-in-out;
+      -o-transition: height 0.4s ease-in-out;
+    }
+
+    .nav-pattern-kanan {
+      right: -32px;
+    }
+
+    .nav-pattern-kiri {
+      left: -32px;
+    }
+  }
+}
+
+// BREAKPOINT
+@media screen and (max-width: 576px) {
+  header nav.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    .nav-pattern-kiri,
+    .nav-pattern-kanan {
+      height: 58px;
+    }
+
+    .nav-pattern-kanan {
+      right: -27px;
+    }
+
+    .nav-pattern-kiri {
+      left: -27px;
+    }
+  }
+}

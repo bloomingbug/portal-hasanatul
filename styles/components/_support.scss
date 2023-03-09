@@ -1,0 +1,32 @@
+main .support {
+  margin-top: 72px;
+
+  .logo-slider .logo-wrapper {
+    height: 100px;
+    display: block;
+
+    .logo-perusahaan {
+      height: 100%;
+      object-fit: contain;
+      opacity: 0;
+    }
+
+    &:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
+    &:target {
+      cursor: grab;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+    }
+  }
+}
+
+// BREAKPOINT: 768px
+@media screen and (max-width: 767px) {
+  main .support {
+    margin-top: 56px;
+  }
+}
